@@ -16,6 +16,8 @@
 <ul class="nav-menu" id="navMenu">
 <li><a href="#home">الرئيسية</a></li>
 <li><a href="#attractions">الوجهات</a></li>
+<li><a href="#flights">الطيران</a></li>
+<li><a href="#hotels">الفنادق</a></li>
 <li><a href="#booking">الحجز</a></li>
 <li><a href="#guides">المرشدون</a></li>
 <li><a href="#contact">تواصل معنا</a></li>
@@ -48,54 +50,89 @@
 <h2 class="section-title">أبرز الوجهات السياحية</h2>
 <p class="section-subtitle">اكتشف أجمل المعالم الطبيعية والتاريخية في المملكة</p>
 <div class="attractions-grid">
-<div class="card card-1">
-<div class="card-img">&#127956;</div>
-<div class="card-body">
-<h3>العلا الأثرية</h3>
-<p>موقع أثري تاريخي يضم مدائن صالح ومناظر صخرية خلابة</p>
-<span class="card-tag">تاريخي</span>
+<div class="card card-1"><div class="card-img">&#127956;</div><div class="card-body"><h3>العلا الأثرية</h3><p>موقع أثري تاريخي يضم مدائن صالح ومناظر صخرية خلابة</p><span class="card-tag">تاريخي</span></div></div>
+<div class="card card-2"><div class="card-img">&#127958;</div><div class="card-body"><h3>رمال الباحة البيضاء</h3><p>كثبان رملية ساحرة ومناظر صحراوية تأسر الأنظار</p><span class="card-tag">طبيعي</span></div></div>
+<div class="card card-3"><div class="card-img">&#127754;</div><div class="card-body"><h3>جزر فرسان</h3><p>شواطئ بكر ومياه فيروزية وشعاب مرجانية رائعة</p><span class="card-tag">بحري</span></div></div>
+<div class="card card-4"><div class="card-img">&#128507;</div><div class="card-body"><h3>جدة التاريخية</h3><p>البلد القديمة بمبانيها التراثية وأسواقها العريقة</p><span class="card-tag">ثقافي</span></div></div>
+<div class="card card-5"><div class="card-img">&#127956;</div><div class="card-body"><h3>جبال عسير</h3><p>قمم خضراء وأجواء معتدلة وقرى تراثية ملونة</p><span class="card-tag">جبلي</span></div></div>
+<div class="card card-6"><div class="card-img">&#127963;</div><div class="card-body"><h3>الدرعية التاريخية</h3><p>حي الطريف وعاصمة الدولة السعودية الأولى</p><span class="card-tag">تراثي</span></div></div>
 </div>
 </div>
-<div class="card card-2">
-<div class="card-img">&#127958;</div>
-<div class="card-body">
-<h3>رمال الباحة البيضاء</h3>
-<p>كثبان رملية ساحرة ومناظر صحراوية تأسر الأنظار</p>
-<span class="card-tag">طبيعي</span>
+</section>
+
+<section id="flights" class="flights">
+<div class="container">
+<h2 class="section-title">حجز تذاكر الطيران</h2>
+<p class="section-subtitle">قارن واحجز رحلاتك مع جميع شركات الطيران المحلية والعالمية</p>
+<form class="flight-form" id="flightForm">
+<div class="form-row">
+<div class="form-group"><label for="from">مدينة المغادرة</label><input type="text" id="from" placeholder="مثال: الرياض"></div>
+<div class="form-group"><label for="to">مدينة الوصول</label><input type="text" id="to" placeholder="مثال: جدة"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="departDate">تاريخ المغادرة</label><input type="date" id="departDate"></div>
+<div class="form-group"><label for="returnDate">تاريخ العودة</label><input type="date" id="returnDate"></div>
+</div>
+<button type="submit" class="btn-primary btn-full">بحث عن الرحلات</button>
+</form>
+<h3 class="subsection-title">شركات الطيران المحلية</h3>
+<div class="airlines-grid">
+<a href="https://www.saudia.com" target="_blank" rel="noopener" class="airline-card al-1"><span class="airline-icon">&#9992;</span><span class="airline-name">الخطوط السعودية</span></a>
+<a href="https://www.flynas.com" target="_blank" rel="noopener" class="airline-card al-2"><span class="airline-icon">&#9992;</span><span class="airline-name">طيران ناس</span></a>
+<a href="https://www.flyadeal.com" target="_blank" rel="noopener" class="airline-card al-3"><span class="airline-icon">&#9992;</span><span class="airline-name">طيران أديل</span></a>
+<a href="https://www.riyadhair.com" target="_blank" rel="noopener" class="airline-card al-4"><span class="airline-icon">&#9992;</span><span class="airline-name">طيران الرياض</span></a>
+</div>
+<h3 class="subsection-title">شركات الطيران العالمية</h3>
+<div class="airlines-grid">
+<a href="https://www.emirates.com" target="_blank" rel="noopener" class="airline-card al-5"><span class="airline-icon">&#9992;</span><span class="airline-name">طيران الإمارات</span></a>
+<a href="https://www.qatarairways.com" target="_blank" rel="noopener" class="airline-card al-6"><span class="airline-icon">&#9992;</span><span class="airline-name">الخطوط القطرية</span></a>
+<a href="https://www.etihad.com" target="_blank" rel="noopener" class="airline-card al-7"><span class="airline-icon">&#9992;</span><span class="airline-name">الاتحاد للطيران</span></a>
+<a href="https://www.turkishairlines.com" target="_blank" rel="noopener" class="airline-card al-8"><span class="airline-icon">&#9992;</span><span class="airline-name">الخطوط التركية</span></a>
+<a href="https://www.flydubai.com" target="_blank" rel="noopener" class="airline-card al-1"><span class="airline-icon">&#9992;</span><span class="airline-name">فلاي دبي</span></a>
+<a href="https://www.egyptair.com" target="_blank" rel="noopener" class="airline-card al-2"><span class="airline-icon">&#9992;</span><span class="airline-name">مصر للطيران</span></a>
+<a href="https://www.britishairways.com" target="_blank" rel="noopener" class="airline-card al-3"><span class="airline-icon">&#9992;</span><span class="airline-name">الخطوط البريطانية</span></a>
+<a href="https://www.lufthansa.com" target="_blank" rel="noopener" class="airline-card al-4"><span class="airline-icon">&#9992;</span><span class="airline-name">لوفتهانزا</span></a>
+</div>
+<h3 class="subsection-title">منصات مقارنة وحجز الطيران</h3>
+<div class="airlines-grid">
+<a href="https://www.almosafer.com" target="_blank" rel="noopener" class="airline-card al-5"><span class="airline-icon">&#128747;</span><span class="airline-name">المسافر</span></a>
+<a href="https://www.wego.com" target="_blank" rel="noopener" class="airline-card al-6"><span class="airline-icon">&#128747;</span><span class="airline-name">ويجو</span></a>
+<a href="https://www.skyscanner.net" target="_blank" rel="noopener" class="airline-card al-7"><span class="airline-icon">&#128747;</span><span class="airline-name">سكاي سكانر</span></a>
+<a href="https://www.rehlat.com" target="_blank" rel="noopener" class="airline-card al-8"><span class="airline-icon">&#128747;</span><span class="airline-name">رحلات</span></a>
+<a href="https://www.google.com/travel/flights" target="_blank" rel="noopener" class="airline-card al-1"><span class="airline-icon">&#128747;</span><span class="airline-name">جوجل للرحلات</span></a>
+<a href="https://www.kayak.com" target="_blank" rel="noopener" class="airline-card al-2"><span class="airline-icon">&#128747;</span><span class="airline-name">كاياك</span></a>
 </div>
 </div>
-<div class="card card-3">
-<div class="card-img">&#127754;</div>
-<div class="card-body">
-<h3>جزر فرسان</h3>
-<p>شواطئ بكر ومياه فيروزية وشعاب مرجانية رائعة</p>
-<span class="card-tag">بحري</span>
+</section>
+
+<section id="hotels" class="hotels">
+<div class="container">
+<h2 class="section-title">حجز الفنادق</h2>
+<p class="section-subtitle">احجز إقامتك المثالية عبر جميع منصات وتطبيقات الحجز الفندقي</p>
+<form class="hotel-form" id="hotelForm">
+<div class="form-row">
+<div class="form-group"><label for="hCity">المدينة</label><input type="text" id="hCity" placeholder="مثال: مكة المكرمة"></div>
+<div class="form-group"><label for="hGuests">عدد النزلاء</label><input type="number" id="hGuests" min="1" value="2"></div>
 </div>
+<div class="form-row">
+<div class="form-group"><label for="checkin">تاريخ الوصول</label><input type="date" id="checkin"></div>
+<div class="form-group"><label for="checkout">تاريخ المغادرة</label><input type="date" id="checkout"></div>
 </div>
-<div class="card card-4">
-<div class="card-img">&#128507;</div>
-<div class="card-body">
-<h3>جدة التاريخية</h3>
-<p>البلد القديمة بمبانيها التراثية وأسواقها العريقة</p>
-<span class="card-tag">ثقافي</span>
-</div>
-</div>
-<div class="card card-5">
-<div class="card-img">&#127956;</div>
-<div class="card-body">
-<h3>جبال عسير</h3>
-<p>قمم خضراء وأجواء معتدلة وقرى تراثية ملونة</p>
-<span class="card-tag">جبلي</span>
-</div>
-</div>
-<div class="card card-6">
-<div class="card-img">&#127963;</div>
-<div class="card-body">
-<h3>الدرعية التاريخية</h3>
-<p>حي الطريف وعاصمة الدولة السعودية الأولى</p>
-<span class="card-tag">تراثي</span>
-</div>
-</div>
+<button type="submit" class="btn-primary btn-full">بحث عن الفنادق</button>
+</form>
+<div class="hotels-grid">
+<a href="https://www.booking.com" target="_blank" rel="noopener" class="hotel-card hc-1"><span class="hotel-icon">&#127976;</span><span class="hotel-name">Booking.com</span></a>
+<a href="https://www.almosafer.com" target="_blank" rel="noopener" class="hotel-card hc-2"><span class="hotel-icon">&#127976;</span><span class="hotel-name">المسافر</span></a>
+<a href="https://www.agoda.com" target="_blank" rel="noopener" class="hotel-card hc-3"><span class="hotel-icon">&#127976;</span><span class="hotel-name">أجودا</span></a>
+<a href="https://www.expedia.com" target="_blank" rel="noopener" class="hotel-card hc-4"><span class="hotel-icon">&#127976;</span><span class="hotel-name">إكسبيديا</span></a>
+<a href="https://www.trivago.com" target="_blank" rel="noopener" class="hotel-card hc-5"><span class="hotel-icon">&#127976;</span><span class="hotel-name">تريفاجو</span></a>
+<a href="https://www.airbnb.com" target="_blank" rel="noopener" class="hotel-card hc-6"><span class="hotel-icon">&#127968;</span><span class="hotel-name">Airbnb</span></a>
+<a href="https://www.hotels.com" target="_blank" rel="noopener" class="hotel-card hc-1"><span class="hotel-icon">&#127976;</span><span class="hotel-name">Hotels.com</span></a>
+<a href="https://www.trip.com" target="_blank" rel="noopener" class="hotel-card hc-2"><span class="hotel-icon">&#127976;</span><span class="hotel-name">Trip.com</span></a>
+<a href="https://www.makarem.com" target="_blank" rel="noopener" class="hotel-card hc-3"><span class="hotel-icon">&#127976;</span><span class="hotel-name">مكارم</span></a>
+<a href="https://www.hilton.com" target="_blank" rel="noopener" class="hotel-card hc-4"><span class="hotel-icon">&#127976;</span><span class="hotel-name">هيلتون</span></a>
+<a href="https://www.marriott.com" target="_blank" rel="noopener" class="hotel-card hc-5"><span class="hotel-icon">&#127976;</span><span class="hotel-name">ماريوت</span></a>
+<a href="https://www.ihg.com" target="_blank" rel="noopener" class="hotel-card hc-6"><span class="hotel-icon">&#127976;</span><span class="hotel-name">IHG</span></a>
 </div>
 </div>
 </section>
@@ -106,42 +143,16 @@
 <p class="section-subtitle">املأ النموذج وسنتواصل معك لتنظيم رحلة لا تُنسى</p>
 <form class="booking-form" id="bookingForm">
 <div class="form-row">
-<div class="form-group">
-<label for="name">الاسم الكامل</label>
-<input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
-</div>
-<div class="form-group">
-<label for="email">البريد الإلكتروني</label>
-<input type="email" id="email" name="email" placeholder="example@mail.com" required>
-</div>
+<div class="form-group"><label for="name">الاسم الكامل</label><input type="text" id="name" name="name" placeholder="أدخل اسمك" required></div>
+<div class="form-group"><label for="email">البريد الإلكتروني</label><input type="email" id="email" name="email" placeholder="example@mail.com" required></div>
 </div>
 <div class="form-row">
-<div class="form-group">
-<label for="destination">الوجهة</label>
-<select id="destination" name="destination" required>
-<option value="">اختر الوجهة</option>
-<option value="alula">العلا الأثرية</option>
-<option value="albahah">رمال الباحة</option>
-<option value="farasan">جزر فرسان</option>
-<option value="jeddah">جدة التاريخية</option>
-<option value="asir">جبال عسير</option>
-<option value="diriyah">الدرعية التاريخية</option>
-</select>
-</div>
-<div class="form-group">
-<label for="date">تاريخ الرحلة</label>
-<input type="date" id="date" name="date" required>
-</div>
+<div class="form-group"><label for="destination">الوجهة</label><select id="destination" name="destination" required><option value="">اختر الوجهة</option><option value="alula">العلا الأثرية</option><option value="albahah">رمال الباحة</option><option value="farasan">جزر فرسان</option><option value="jeddah">جدة التاريخية</option><option value="asir">جبال عسير</option><option value="diriyah">الدرعية التاريخية</option></select></div>
+<div class="form-group"><label for="date">تاريخ الرحلة</label><input type="date" id="date" name="date" required></div>
 </div>
 <div class="form-row">
-<div class="form-group">
-<label for="guests">عدد الأشخاص</label>
-<input type="number" id="guests" name="guests" min="1" value="1" required>
-</div>
-<div class="form-group">
-<label for="phone">رقم الجوال</label>
-<input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
-</div>
+<div class="form-group"><label for="guests">عدد الأشخاص</label><input type="number" id="guests" name="guests" min="1" value="1" required></div>
+<div class="form-group"><label for="phone">رقم الجوال</label><input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required></div>
 </div>
 <button type="submit" class="btn-primary btn-full">تأكيد الحجز</button>
 <p class="form-message" id="formMessage"></p>
@@ -154,34 +165,10 @@
 <h2 class="section-title">مرشدونا المعتمدون</h2>
 <p class="section-subtitle">نخبة من أفضل المرشدين السياحيين المدربين والمعتمدين</p>
 <div class="guides-grid">
-<div class="guide-card">
-<div class="guide-avatar avatar-1">&#128100;</div>
-<h3>أحمد العتيبي</h3>
-<p class="guide-role">مرشد العلا والمناطق الأثرية</p>
-<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="guide-exp">خبرة 8 سنوات</p>
-</div>
-<div class="guide-card">
-<div class="guide-avatar avatar-2">&#128105;</div>
-<h3>نورة القحطاني</h3>
-<p class="guide-role">مرشدة الرحلات الثقافية</p>
-<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="guide-exp">خبرة 6 سنوات</p>
-</div>
-<div class="guide-card">
-<div class="guide-avatar avatar-3">&#128100;</div>
-<h3>خالد الشهري</h3>
-<p class="guide-role">مرشد رحلات المغامرات الجبلية</p>
-<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="guide-exp">خبرة 10 سنوات</p>
-</div>
-<div class="guide-card">
-<div class="guide-avatar avatar-4">&#128105;</div>
-<h3>سارة الزهراني</h3>
-<p class="guide-role">مرشدة الرحلات البحرية</p>
-<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="guide-exp">خبرة 5 سنوات</p>
-</div>
+<div class="guide-card"><div class="guide-avatar avatar-1">&#128100;</div><h3>أحمد العتيبي</h3><p class="guide-role">مرشد العلا والمناطق الأثرية</p><div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="guide-exp">خبرة 8 سنوات</p></div>
+<div class="guide-card"><div class="guide-avatar avatar-2">&#128105;</div><h3>نورة القحطاني</h3><p class="guide-role">مرشدة الرحلات الثقافية</p><div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="guide-exp">خبرة 6 سنوات</p></div>
+<div class="guide-card"><div class="guide-avatar avatar-3">&#128100;</div><h3>خالد الشهري</h3><p class="guide-role">مرشد رحلات المغامرات الجبلية</p><div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="guide-exp">خبرة 10 سنوات</p></div>
+<div class="guide-card"><div class="guide-avatar avatar-4">&#128105;</div><h3>سارة الزهراني</h3><p class="guide-role">مرشدة الرحلات البحرية</p><div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="guide-exp">خبرة 5 سنوات</p></div>
 </div>
 </div>
 </section>
@@ -221,17 +208,18 @@
 <ul>
 <li><a href="#home">الرئيسية</a></li>
 <li><a href="#attractions">الوجهات</a></li>
+<li><a href="#flights">الطيران</a></li>
+<li><a href="#hotels">الفنادق</a></li>
 <li><a href="#booking">الحجز</a></li>
-<li><a href="#guides">المرشدون</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>خدماتنا</h4>
 <ul>
-<li><a href="#">رحلات سياحية</a></li>
-<li><a href="#">مرشدون معتمدون</a></li>
-<li><a href="#">حجوزات فندقية</a></li>
-<li><a href="#">باقات عائلية</a></li>
+<li><a href="#flights">حجز الطيران</a></li>
+<li><a href="#hotels">حجز الفنادق</a></li>
+<li><a href="#guides">مرشدون معتمدون</a></li>
+<li><a href="#booking">باقات سياحية</a></li>
 </ul>
 </div>
 </div>
