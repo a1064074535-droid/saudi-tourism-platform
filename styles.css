@@ -151,3 +151,49 @@ footer{background:var(--dark);color:#cfd3e0;padding:3.5rem 0 0;}
   .contact-grid{grid-template-columns:1fr;}
   .footer-content{grid-template-columns:1fr;}
 }
+
+
+/* Subsection titles */
+.subsection-title{font-size:1.4rem;font-weight:700;margin:2.5rem 0 1.2rem;color:var(--dark);text-align:center;}
+.subsection-title::before{content:"";display:inline-block;width:30px;height:4px;background:var(--rainbow);border-radius:4px;vertical-align:middle;margin-left:10px;}
+
+/* Flights */
+.flights{padding:5rem 0;background:#fff;}
+.flight-form,.hotel-form{max-width:760px;margin:0 auto 1rem;background:var(--light);padding:2rem;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.06);border-top:6px solid transparent;border-image:var(--rainbow) 1;}
+.airlines-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;}
+.airline-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:1.5rem 1rem;border-radius:16px;color:#fff;font-weight:700;text-align:center;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 14px rgba(0,0,0,.1);}
+.airline-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 12px 28px rgba(0,0,0,.18);}
+.airline-icon{font-size:2rem;}
+.airline-name{font-size:1.05rem;}
+.al-1{background:linear-gradient(135deg,#1565c0,#1e88e5);}
+.al-2{background:linear-gradient(135deg,#00bcd4,#009688);}
+.al-3{background:linear-gradient(135deg,#43a047,#8bc34a);}
+.al-4{background:linear-gradient(135deg,#fdd835,#fb8c00);}
+.al-5{background:linear-gradient(135deg,#fb8c00,#f4511e);}
+.al-6{background:linear-gradient(135deg,#e53935,#e91e63);}
+.al-7{background:linear-gradient(135deg,#e91e63,#8e24aa);}
+.al-8{background:linear-gradient(135deg,#8e24aa,#6a1b9a);}
+
+/* Hotels */
+.hotels{padding:5rem 0;background:var(--light);}
+.hotels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;margin-top:1rem;}
+.hotel-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:1.6rem 1rem;border-radius:16px;background:#fff;color:var(--dark);font-weight:700;text-align:center;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 14px rgba(0,0,0,.08);border-bottom:5px solid transparent;}
+.hotel-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 12px 28px rgba(0,0,0,.16);}
+.hotel-icon{font-size:2.1rem;}
+.hotel-name{font-size:1.05rem;}
+.hc-1{border-bottom-color:#1565c0;}
+.hc-2{border-bottom-color:#00bcd4;}
+.hc-3{border-bottom-color:#43a047;}
+.hc-4{border-bottom-color:#fb8c00;}
+.hc-5{border-bottom-color:#e91e63;}
+.hc-6{border-bottom-color:#8e24aa;}
+.hc-1 .hotel-icon{color:#1565c0;}
+.hc-2 .hotel-icon{color:#00bcd4;}
+.hc-3 .hotel-icon{color:#43a047;}
+.hc-4 .hotel-icon{color:#fb8c00;}
+.hc-5 .hotel-icon{color:#e91e63;}
+.hc-6 .hotel-icon{color:#8e24aa;}
+
+@media(max-width:768px){
+  .airlines-grid,.hotels-grid{grid-template-columns:repeat(2,1fr);}
+}
