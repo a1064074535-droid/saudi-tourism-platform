@@ -41,6 +41,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // نموذج بحث الطيران
+  var flightForm = document.getElementById('flightForm');
+  if (flightForm) {
+    flightForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var from = document.getElementById('from').value || 'مدينتك';
+      var to = document.getElementById('to').value || 'وجهتك';
+      alert('جاري البحث عن رحلات من ' + from + ' إلى ' + to + '. اختر إحدى شركات الطيران أو منصات الحجز أدناه للمتابعة.');
+    });
+  }
+
+  // نموذج بحث الفنادق
+  var hotelForm = document.getElementById('hotelForm');
+  if (hotelForm) {
+    hotelForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var city = document.getElementById('hCity').value || 'المدينة المختارة';
+      alert('جاري البحث عن فنادق في ' + city + '. اختر إحدى منصات الحجز الفندقي أدناه للمتابعة.');
+    });
+  }
+
   // تأثير ظهور البطاقات عند التمرير
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -51,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.card, .guide-card, .stat-item').forEach(function (el) {
+  document.querySelectorAll('.card, .guide-card, .stat-item, .airline-card, .hotel-card').forEach(function (el) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity .6s ease, transform .6s ease';
