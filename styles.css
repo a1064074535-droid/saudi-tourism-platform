@@ -77,13 +77,13 @@ img{max-width:100%;}
 .attractions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
 .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.07);transition:transform .35s,box-shadow .35s;}
 .card:hover{transform:translateY(-10px);box-shadow:0 16px 38px rgba(0,0,0,.16);}
-.card-img{height:170px;display:flex;align-items:center;justify-content:center;font-size:4.5rem;}
-.card-1 .card-img{background:linear-gradient(135deg,#1565c0,#1e88e5);}
-.card-2 .card-img{background:linear-gradient(135deg,#fb8c00,#fdd835);}
-.card-3 .card-img{background:linear-gradient(135deg,#00bcd4,#009688);}
-.card-4 .card-img{background:linear-gradient(135deg,#e91e63,#8e24aa);}
-.card-5 .card-img{background:linear-gradient(135deg,#43a047,#8bc34a);}
-.card-6 .card-img{background:linear-gradient(135deg,#f4511e,#e53935);}
+.card-img{height:180px;background-size:cover;background-position:center;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;}
+
+
+
+
+
+
 .card-body{padding:1.6rem;}
 .card-body h3{margin-bottom:.6rem;font-size:1.3rem;color:var(--dark);}
 .card-body p{color:var(--gray);margin-bottom:1rem;}
