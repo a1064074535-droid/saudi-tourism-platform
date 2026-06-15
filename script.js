@@ -1,69 +1,60 @@
-// Saudi Tourism Platform - JavaScript
+// المكتبة الرقمية - منصة السياحة السعودية
+document.addEventListener('DOMContentLoaded', function () {
+  // تبديل قائمة الجوال
+  var toggle = document.getElementById('menuToggle');
+  var menu = document.getElementById('navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () {
+      menu.classList.toggle('active');
+    });
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('active');
+      });
+    });
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Saudi Tourism Platform loaded');
-      initializeEventListeners();
+  // التمرير السلس للروابط الداخلية
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // التعامل مع نموذج الحجز
+  var form = document.getElementById('bookingForm');
+  var msg = document.getElementById('formMessage');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      var dest = document.getElementById('destination');
+      var destText = dest.options[dest.selectedIndex].text;
+      if (msg) {
+        msg.textContent = 'شكراً ' + name + '! تم استلام طلب حجزك إلى ' + destText + ' وسنتواصل معك قريباً.';
+      }
+      form.reset();
+    });
+  }
+
+  // تأثير ظهور البطاقات عند التمرير
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card, .guide-card, .stat-item').forEach(function (el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity .6s ease, transform .6s ease';
+    observer.observe(el);
+  });
 });
-
-function initializeEventListeners() {
-      // Tab switching
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-              btn.addEventListener('click', function() {
-                            const tabName = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-                            showTab(tabName);
-              });
-    });
-
-    // Button click handlers
-    document.querySelectorAll('.btn-primary').forEach(btn => {
-              btn.addEventListener('click', handleBooking);
-    });
-
-    document.querySelectorAll('.btn-secondary').forEach(btn => {
-              btn.addEventListener('click', handleTourBook);
-    });
-}
-
-function showTab(tabName) {
-      // Hide all tabs
-    document.querySelectorAll('.tab-content').forEach(tab => {
-              tab.classList.remove('active');
-    });
-
-    // Remove active class from buttons
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-              btn.classList.remove('active');
-    });
-
-    // Show selected tab
-    const selectedTab = document.getElementById(tabName);
-      if (selectedTab) {
-                selectedTab.classList.add('active');
-      }
-
-    // Add active class to clicked button
-    event.target.classList.add('active');
-}
-
-function handleBooking() {
-      const form = event.target.closest('form');
-      if (form && form.checkValidity()) {
-                const formData = new FormData(form);
-                console.log('Booking submitted:', Object.fromEntries(formData));
-                alert('تم استقبال طلب الحجز الخاص بك!');
-                form.reset();
-      }
-}
-
-function handleTourBook() {
-      console.log('Tour booking initiated');
-      const tourName = event.target.closest('.card').querySelector('h3').textContent;
-      alert(`سيتم التواصل معك قريباً بخصوص: ${tourName}`);
-}
-
-function openWhatsApp() {
-      const phoneNumber = '+966501234567';
-      const message = 'السلام عليكم، أود الاستفسار عن الخدمات';
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-}
