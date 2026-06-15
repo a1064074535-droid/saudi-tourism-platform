@@ -180,3 +180,8 @@ footer{background:var(--dark);color:#cfd3e0;padding:3.5rem 0 0;}
   .footer-content{grid-template-columns:1fr;}
   .airlines-grid,.hotels-grid{grid-template-columns:repeat(2,1fr);}
 }
+
+/* Location line and reserve booking button */
+.card-loc{font-size:.85rem;color:#00838f;margin-top:.4rem;font-weight:600;}
+.reserve-btn{display:inline-block;margin-top:.8rem;padding:.6rem 1.2rem;border-radius:30px;background:var(--rainbow-diag);color:#fff;font-weight:700;font-size:.9rem;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 12px rgba(0,0,0,.15);}
+.reserve-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25);}
