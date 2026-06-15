@@ -1,48 +1,244 @@
 <!DOCTYPE html>
-  <html lang="ar" dir="rtl">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Platform</title>
-      <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-      <nav class="navbar">
-          <div class="container">
-              <div class="logo">Saudi Tourism Platform</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#attractions">Attractions</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#guides">Guides</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-      </nav>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المكتبة الرقمية - منصة السياحة السعودية</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+<div class="container">
+<a href="#home" class="logo">المكتبة الرقمية</a>
+<button class="menu-toggle" id="menuToggle" aria-label="القائمة">&#9776;</button>
+<ul class="nav-menu" id="navMenu">
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#attractions">الوجهات</a></li>
+<li><a href="#booking">الحجز</a></li>
+<li><a href="#guides">المرشدون</a></li>
+<li><a href="#contact">تواصل معنا</a></li>
+</ul>
+</div>
+</nav>
 
-      <section id="home" class="hero">
-          <h1>Discover Saudi Arabia</h1>
-        <p>Book your perfect trip with certified guides</p>
-          <button class="btn-primary">Start Now</button>
-      </section>
+<header id="home" class="hero">
+<div class="hero-content">
+<h1>اكتشف جمال المملكة العربية السعودية</h1>
+<p>رحلتك المثالية تبدأ هنا - احجز مع مرشدين معتمدين واستكشف أجمل الوجهات السياحية</p>
+<div class="hero-buttons">
+<a href="#attractions" class="btn-primary">استكشف الوجهات</a>
+<a href="#booking" class="btn-secondary">احجز الآن</a>
+</div>
+</div>
+</header>
 
-      <section id="attractions" class="attractions">
-          <h2>Featured Attractions</h2>
-          <div class="attractions-grid">
-              <div class="card">
-                  <h3>Al-Bahah White Sands</h3>
-                <p>Beautiful desert landscape</p>
-            </div>
-              <div class="card">
-                  <h3>Alula Ancient City</h3>
-                <p>Historic archaeological site</p>
-            </div>
-        </div>
-    </section>
+<section class="stats">
+<div class="container stats-grid">
+<div class="stat-item"><span class="stat-number">+150</span><span class="stat-label">وجهة سياحية</span></div>
+<div class="stat-item"><span class="stat-number">+80</span><span class="stat-label">مرشد معتمد</span></div>
+<div class="stat-item"><span class="stat-number">+10K</span><span class="stat-label">رحلة ناجحة</span></div>
+<div class="stat-item"><span class="stat-number">4.9</span><span class="stat-label">تقييم العملاء</span></div>
+</div>
+</section>
 
-    <footer>
-        <p>Copyright 2024 - Saudi Tourism Platform</p>
-    </footer>
-    <script src="script.js"></script>
+<section id="attractions" class="attractions">
+<div class="container">
+<h2 class="section-title">أبرز الوجهات السياحية</h2>
+<p class="section-subtitle">اكتشف أجمل المعالم الطبيعية والتاريخية في المملكة</p>
+<div class="attractions-grid">
+<div class="card card-1">
+<div class="card-img">&#127956;</div>
+<div class="card-body">
+<h3>العلا الأثرية</h3>
+<p>موقع أثري تاريخي يضم مدائن صالح ومناظر صخرية خلابة</p>
+<span class="card-tag">تاريخي</span>
+</div>
+</div>
+<div class="card card-2">
+<div class="card-img">&#127958;</div>
+<div class="card-body">
+<h3>رمال الباحة البيضاء</h3>
+<p>كثبان رملية ساحرة ومناظر صحراوية تأسر الأنظار</p>
+<span class="card-tag">طبيعي</span>
+</div>
+</div>
+<div class="card card-3">
+<div class="card-img">&#127754;</div>
+<div class="card-body">
+<h3>جزر فرسان</h3>
+<p>شواطئ بكر ومياه فيروزية وشعاب مرجانية رائعة</p>
+<span class="card-tag">بحري</span>
+</div>
+</div>
+<div class="card card-4">
+<div class="card-img">&#128507;</div>
+<div class="card-body">
+<h3>جدة التاريخية</h3>
+<p>البلد القديمة بمبانيها التراثية وأسواقها العريقة</p>
+<span class="card-tag">ثقافي</span>
+</div>
+</div>
+<div class="card card-5">
+<div class="card-img">&#127956;</div>
+<div class="card-body">
+<h3>جبال عسير</h3>
+<p>قمم خضراء وأجواء معتدلة وقرى تراثية ملونة</p>
+<span class="card-tag">جبلي</span>
+</div>
+</div>
+<div class="card card-6">
+<div class="card-img">&#127963;</div>
+<div class="card-body">
+<h3>الدرعية التاريخية</h3>
+<p>حي الطريف وعاصمة الدولة السعودية الأولى</p>
+<span class="card-tag">تراثي</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="booking" class="booking">
+<div class="container">
+<h2 class="section-title">احجز رحلتك الآن</h2>
+<p class="section-subtitle">املأ النموذج وسنتواصل معك لتنظيم رحلة لا تُنسى</p>
+<form class="booking-form" id="bookingForm">
+<div class="form-row">
+<div class="form-group">
+<label for="name">الاسم الكامل</label>
+<input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+</div>
+<div class="form-group">
+<label for="email">البريد الإلكتروني</label>
+<input type="email" id="email" name="email" placeholder="example@mail.com" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="destination">الوجهة</label>
+<select id="destination" name="destination" required>
+<option value="">اختر الوجهة</option>
+<option value="alula">العلا الأثرية</option>
+<option value="albahah">رمال الباحة</option>
+<option value="farasan">جزر فرسان</option>
+<option value="jeddah">جدة التاريخية</option>
+<option value="asir">جبال عسير</option>
+<option value="diriyah">الدرعية التاريخية</option>
+</select>
+</div>
+<div class="form-group">
+<label for="date">تاريخ الرحلة</label>
+<input type="date" id="date" name="date" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="guests">عدد الأشخاص</label>
+<input type="number" id="guests" name="guests" min="1" value="1" required>
+</div>
+<div class="form-group">
+<label for="phone">رقم الجوال</label>
+<input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
+</div>
+</div>
+<button type="submit" class="btn-primary btn-full">تأكيد الحجز</button>
+<p class="form-message" id="formMessage"></p>
+</form>
+</div>
+</section>
+
+<section id="guides" class="guides">
+<div class="container">
+<h2 class="section-title">مرشدونا المعتمدون</h2>
+<p class="section-subtitle">نخبة من أفضل المرشدين السياحيين المدربين والمعتمدين</p>
+<div class="guides-grid">
+<div class="guide-card">
+<div class="guide-avatar avatar-1">&#128100;</div>
+<h3>أحمد العتيبي</h3>
+<p class="guide-role">مرشد العلا والمناطق الأثرية</p>
+<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="guide-exp">خبرة 8 سنوات</p>
+</div>
+<div class="guide-card">
+<div class="guide-avatar avatar-2">&#128105;</div>
+<h3>نورة القحطاني</h3>
+<p class="guide-role">مرشدة الرحلات الثقافية</p>
+<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="guide-exp">خبرة 6 سنوات</p>
+</div>
+<div class="guide-card">
+<div class="guide-avatar avatar-3">&#128100;</div>
+<h3>خالد الشهري</h3>
+<p class="guide-role">مرشد رحلات المغامرات الجبلية</p>
+<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="guide-exp">خبرة 10 سنوات</p>
+</div>
+<div class="guide-card">
+<div class="guide-avatar avatar-4">&#128105;</div>
+<h3>سارة الزهراني</h3>
+<p class="guide-role">مرشدة الرحلات البحرية</p>
+<div class="guide-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="guide-exp">خبرة 5 سنوات</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<h2 class="section-title">تواصل معنا</h2>
+<p class="section-subtitle">نحن هنا لمساعدتك في أي وقت</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item"><span class="contact-icon">&#128231;</span><div><h4>البريد الإلكتروني</h4><p>info@digitallibrary.sa</p></div></div>
+<div class="contact-item"><span class="contact-icon">&#128222;</span><div><h4>الهاتف</h4><p>920000000</p></div></div>
+<div class="contact-item"><span class="contact-icon">&#128205;</span><div><h4>العنوان</h4><p>الرياض، المملكة العربية السعودية</p></div></div>
+<div class="contact-item"><span class="contact-icon">&#128336;</span><div><h4>ساعات العمل</h4><p>يومياً من 8 صباحاً حتى 10 مساءً</p></div></div>
+</div>
+<div class="contact-social">
+<h3>تابعنا على وسائل التواصل</h3>
+<div class="social-links">
+<a href="#" class="social-btn sb-1">تويتر</a>
+<a href="#" class="social-btn sb-2">انستغرام</a>
+<a href="#" class="social-btn sb-3">سناب شات</a>
+<a href="#" class="social-btn sb-4">يوتيوب</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer-content">
+<div class="footer-col">
+<h3 class="footer-logo">المكتبة الرقمية</h3>
+<p>منصتك الأولى لاكتشاف وحجز أجمل الوجهات السياحية في المملكة العربية السعودية مع مرشدين معتمدين.</p>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<ul>
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#attractions">الوجهات</a></li>
+<li><a href="#booking">الحجز</a></li>
+<li><a href="#guides">المرشدون</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>خدماتنا</h4>
+<ul>
+<li><a href="#">رحلات سياحية</a></li>
+<li><a href="#">مرشدون معتمدون</a></li>
+<li><a href="#">حجوزات فندقية</a></li>
+<li><a href="#">باقات عائلية</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>جميع الحقوق محفوظة &copy; 2026 المكتبة الرقمية - منصة السياحة السعودية</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
