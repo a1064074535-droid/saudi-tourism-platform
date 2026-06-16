@@ -20,6 +20,8 @@
 <li><a href="#hotels">الفنادق</a></li>
 <li><a href="#booking">الحجز</a></li>
 <li><a href="#guides">المرشدون</a></li>
+<li><a href="#guide-portal">بوابة المرشدين</a></li>
+<li><a href="#companies">الشركات السياحية</a></li>
 <li><a href="#contact">تواصل معنا</a></li>
 </ul>
 </div>
@@ -296,6 +298,73 @@
 </div>
 </section>
 
+<!-- قسم تسجيل ودخول المرشدين -->
+<section id="guide-portal" class="guide-portal">
+<div class="container">
+<h2 class="section-title">بوابة المرشدين السياحيين</h2>
+<p class="section-sub">سجّل كمرشد سياحي معتمد أو ادخل إلى حسابك</p>
+<div class="auth-wrap">
+<div class="auth-tabs">
+<button type="button" class="auth-tab active" data-tab="login">تسجيل الدخول</button>
+<button type="button" class="auth-tab" data-tab="register">حساب جديد</button>
+</div>
+
+<form id="loginForm" class="auth-form active">
+<div class="auth-field"><label>البريد الإلكتروني</label><input type="email" id="loginEmail" placeholder="example@email.com" required></div>
+<div class="auth-field"><label>كلمة المرور</label><input type="password" id="loginPass" placeholder="••••••••" required></div>
+<button type="submit" class="auth-btn">دخول</button>
+<p class="auth-msg" id="loginMsg"></p>
+</form>
+
+<form id="registerForm" class="auth-form">
+<div class="auth-field"><label>الاسم الكامل</label><input type="text" id="regName" placeholder="الاسم الكامل" required></div>
+<div class="auth-field"><label>البريد الإلكتروني</label><input type="email" id="regEmail" placeholder="example@email.com" required></div>
+<div class="auth-field"><label>كلمة المرور</label><input type="password" id="regPass" placeholder="6 أحرف على الأقل" required></div>
+<div class="auth-field"><label>التخصص</label><input type="text" id="regSpec" placeholder="مثال: مرشد المناطق الأثرية" required></div>
+<div class="auth-field"><label>سنوات الخبرة</label><input type="number" id="regExp" min="0" placeholder="عدد السنوات" required></div>
+<div class="auth-field"><label>المدينة</label><input type="text" id="regCity" placeholder="مثال: الرياض" required></div>
+<button type="submit" class="auth-btn">إنشاء الحساب</button>
+<p class="auth-msg" id="regMsg"></p>
+</form>
+
+<div id="guideDashboard" class="guide-dashboard">
+<div class="dash-avatar">👤</div>
+<h3 id="dashName"></h3>
+<div class="dash-info" id="dashInfo"></div>
+<button type="button" class="auth-btn logout-btn" id="logoutBtn">تسجيل الخروج</button>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- الشركات السياحية -->
+<section id="companies" class="companies">
+<div class="container">
+<h2 class="section-title">الشركات السياحية في المملكة</h2>
+<p class="section-sub">أبرز الشركات والجهات السياحية المرخصة في المملكة العربية السعودية</p>
+<div class="companies-grid">
+<div class="company-card"><div class="company-icon">🏢</div><h4>الشركة السعودية للضيافة التراثية</h4><p class="company-spec">ضيافة وتراث</p><span class="company-tag">وزارة السياحة</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة السياحة العربية (سيرا)</h4><p class="company-spec">سياحة شاملة</p><span class="company-tag">مجموعة سيرا</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>مجموعة المسافر</h4><p class="company-spec">حجوزات وبرامج سياحية</p><span class="company-tag">Almosafer</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>طيران ناس للعطلات</h4><p class="company-spec">باقات سفر</p><span class="company-tag">flynas</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>الخطوط السعودية للعطلات</h4><p class="company-spec">باقات سفر وعمرة</p><span class="company-tag">Saudia Holidays</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة دور للضيافة</h4><p class="company-spec">فنادق ومنتجعات</p><span class="company-tag">Dur Hospitality</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة العلا للتطوير</h4><p class="company-spec">وجهة العلا</p><span class="company-tag">الهيئة الملكية للعلا</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة البحر الأحمر للتطوير</h4><p class="company-spec">منتجعات البحر الأحمر</p><span class="company-tag">Red Sea Global</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة الدرعية</h4><p class="company-spec">الدرعية التاريخية</p><span class="company-tag">Diriyah Company</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة القدية للاستثمار</h4><p class="company-spec">ترفيه ومغامرات</p><span class="company-tag">Qiddiya</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>مجموعة عذيب للسفر والسياحة</h4><p class="company-spec">سفر وسياحة</p><span class="company-tag">Adeeb Group</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>الطيار للسفر والسياحة</h4><p class="company-spec">سفر وسياحة</p><span class="company-tag">Al Tayyar / Seera</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>مجموعة كانون للسفر</h4><p class="company-spec">حجوزات وبرامج</p><span class="company-tag">Kanoo Travel</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة نسما للسياحة</h4><p class="company-spec">برامج سياحية</p><span class="company-tag">Nesma</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>مرافق الرياض للسياحة</h4><p class="company-spec">سياحة محلية</p><span class="company-tag">Riyadh Season</span></div>
+<div class="company-card"><div class="company-icon">🏢</div><h4>شركة صحاري للرحلات</h4><p class="company-spec">رحلات صحراوية</p><span class="company-tag">Sahari Trips</span></div>
+</div>
+</div>
+</section>
+
+
 <section id="contact" class="contact">
 <div class="container">
 <h2 class="section-title">تواصل معنا</h2>
@@ -376,5 +445,67 @@
   document.addEventListener("keydown",function(e){ if(!lb.classList.contains("open"))return; if(e.key==="Escape")close(); else if(e.key==="ArrowLeft")show(idx+1); else if(e.key==="ArrowRight")show(idx-1); });
 })();
 </script>
-  </body>
+  <script>
+(function(){
+  var KEY="dl_guides";
+  function getGuides(){ try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return []} }
+  function saveGuides(g){ localStorage.setItem(KEY, JSON.stringify(g)); }
+  function getSession(){ try{return JSON.parse(localStorage.getItem("dl_session")||"null")}catch(e){return null} }
+  function setSession(s){ if(s)localStorage.setItem("dl_session",JSON.stringify(s)); else localStorage.removeItem("dl_session"); }
+  var tabs=document.querySelectorAll(".auth-tab");
+  var forms={login:document.getElementById("loginForm"),register:document.getElementById("registerForm")};
+  tabs.forEach(function(t){ t.addEventListener("click",function(){
+    tabs.forEach(function(x){x.classList.remove("active")}); t.classList.add("active");
+    Object.keys(forms).forEach(function(k){forms[k].classList.remove("active")});
+    forms[t.getAttribute("data-tab")].classList.add("active");
+  }); });
+  function showDash(guide){
+    document.querySelector(".auth-tabs").style.display="none";
+    forms.login.classList.remove("active"); forms.register.classList.remove("active");
+    var d=document.getElementById("guideDashboard"); d.classList.add("active");
+    document.getElementById("dashName").textContent="مرحباً، "+guide.name;
+    document.getElementById("dashInfo").innerHTML="<div><strong>التخصص:</strong> "+guide.spec+"</div>"+
+      "<div><strong>الخبرة:</strong> "+guide.exp+" سنوات</div>"+
+      "<div><strong>المدينة:</strong> "+guide.city+"</div>"+
+      "<div><strong>البريد:</strong> "+guide.email+"</div>";
+  }
+  function hideDash(){
+    document.querySelector(".auth-tabs").style.display="";
+    document.getElementById("guideDashboard").classList.remove("active");
+    forms.login.classList.add("active");
+  }
+  var rf=document.getElementById("registerForm");
+  if(rf) rf.addEventListener("submit",function(e){ e.preventDefault();
+    var name=document.getElementById("regName").value.trim();
+    var email=document.getElementById("regEmail").value.trim().toLowerCase();
+    var pass=document.getElementById("regPass").value;
+    var spec=document.getElementById("regSpec").value.trim();
+    var exp=document.getElementById("regExp").value;
+    var city=document.getElementById("regCity").value.trim();
+    var msg=document.getElementById("regMsg");
+    if(pass.length<6){ msg.className="auth-msg err"; msg.textContent="كلمة المرور يجب أن تكون 6 أحرف على الأقل"; return; }
+    var guides=getGuides();
+    if(guides.some(function(g){return g.email===email})){ msg.className="auth-msg err"; msg.textContent="هذا البريد مسجل مسبقاً"; return; }
+    var guide={name:name,email:email,pass:pass,spec:spec,exp:exp,city:city,created:Date.now()};
+    guides.push(guide); saveGuides(guides); setSession({email:email});
+    msg.className="auth-msg ok"; msg.textContent="تم إنشاء الحساب بنجاح";
+    rf.reset(); showDash(guide);
+  });
+  var lf=document.getElementById("loginForm");
+  if(lf) lf.addEventListener("submit",function(e){ e.preventDefault();
+    var email=document.getElementById("loginEmail").value.trim().toLowerCase();
+    var pass=document.getElementById("loginPass").value;
+    var msg=document.getElementById("loginMsg");
+    var guides=getGuides();
+    var guide=guides.filter(function(g){return g.email===email && g.pass===pass})[0];
+    if(!guide){ msg.className="auth-msg err"; msg.textContent="بيانات الدخول غير صحيحة"; return; }
+    setSession({email:email}); msg.className="auth-msg ok"; msg.textContent="تم تسجيل الدخول"; lf.reset(); showDash(guide);
+  });
+  var lb=document.getElementById("logoutBtn");
+  if(lb) lb.addEventListener("click",function(){ setSession(null); hideDash(); });
+  var sess=getSession();
+  if(sess){ var g=getGuides().filter(function(x){return x.email===sess.email})[0]; if(g) showDash(g); }
+})();
+</script>
+</body>
 </html>
