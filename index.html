@@ -4,27 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المكتبة الرقمية - منصة السياحة السعودية</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="progressBar"></div>
+<button id="backToTop" title="للأعلى">↑</button>
+
 <nav class="navbar">
 <div class="container">
-<a href="#home" class="logo">المكتبة الرقمية</a>
+<a href="#home" data-i18n="navHome" class="logo">المكتبة الرقمية</a>
 <button class="menu-toggle" id="menuToggle" aria-label="القائمة">&#9776;</button>
 <ul class="nav-menu" id="navMenu">
-<li><a href="#home">الرئيسية</a></li>
-<li><a href="#attractions">الوجهات</a></li>
-<li><a href="#flights">الطيران</a></li>
-<li><a href="#hotels">الفنادق</a></li>
-<li><a href="#booking">الحجز</a></li>
-<li><a href="#guides">المرشدون</a></li>
-<li><a href="#guide-portal">بوابة المرشدين</a></li>
-<li><a href="#companies">الشركات السياحية</a></li>
-<li><a href="#contact">تواصل معنا</a></li>
+<li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+<li><a href="#attractions" data-i18n="navDest">الوجهات</a></li>
+<li><a href="#flights" data-i18n="navFlights">الطيران</a></li>
+<li><a href="#hotels" data-i18n="navHotels">الفنادق</a></li>
+<li><a href="#booking" data-i18n="navBooking">الحجز</a></li>
+<li><a href="#guides" data-i18n="navGuides">المرشدون</a></li>
+<li><a href="#guide-portal" data-i18n="navPortal">بوابة المرشدين</a></li>
+<li><a href="#companies" data-i18n="navCompanies">الشركات السياحية</a></li>
+<li><a href="#tools" data-i18n="navTools">أدوات المسافر</a></li>
+<li><a href="#faq" data-i18n="navFaq">الأسئلة</a></li>
+<li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
 </ul>
 </div>
+
+<div class="nav-controls"><button id="langToggle" class="nav-ctrl-btn" title="Language / اللغة">EN</button><button id="themeToggle" class="nav-ctrl-btn" title="Theme / السمة">🌙</button></div>
 </nav>
 
 <header id="home" class="hero">
@@ -32,8 +39,8 @@
 <h1>اكتشف جمال المملكة العربية السعودية</h1>
 <p>رحلتك المثالية تبدأ هنا - احجز مع مرشدين معتمدين واستكشف أجمل الوجهات السياحية</p>
 <div class="hero-buttons">
-<a href="#attractions" class="btn-primary">استكشف الوجهات</a>
-<a href="#booking" class="btn-secondary">احجز الآن</a>
+<a href="#attractions" data-i18n="navDest" class="btn-primary">استكشف الوجهات</a>
+<a href="#booking" data-i18n="navBooking" class="btn-secondary">احجز الآن</a>
 </div>
 </div>
 </header>
@@ -51,7 +58,8 @@
       <div class="container">
         <h2 class="section-title">أبرز الوجهات السياحية</h2>
         <p class="section-subtitle">اكتشف أجمل المعالم الطبيعية والتاريخية في المملكة</p>
-        <div class="attractions-grid">
+        <div class="attr-search-wrap"><input type="text" id="attrSearch" class="attr-search" placeholder="ابحث عن وجهة... / Search destinations..." data-i18n-ph="searchPlaceholder"><span class="attr-search-count" id="attrCount"></span></div>
+<div class="attractions-grid">
         <div class="card card-1" data-gallery="faw">
           <div class="card-img" style="background-image:linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.40)),url(&#39;https://commons.wikimedia.org/wiki/Special:FilePath/Lintel%20-%20Qaryat%20al-Faw%20-%203rd%20Century%20BCE%20-%2020180430.jpg?width=800&#39;);"></div>
           <div class="card-body">
@@ -389,6 +397,12 @@
 </div>
 </section>
 
+
+<section id="tools" class="tools reveal"><div class="container"><h2 class="section-title" data-i18n="toolsTitle">أدوات المسافر</h2><p class="section-subtitle" data-i18n="toolsSub">أدوات ذكية تساعدك في تخطيط رحلتك</p><div class="tools-grid"><div class="tool-card"><h3 class="tool-title">💱 <span data-i18n="currencyTitle">محول العملات</span></h3><div class="cc-row"><input type="number" id="ccAmount" class="cc-input" value="100" min="0"></div><div class="cc-row cc-selects"><select id="ccFrom" class="cc-select"></select><button id="ccSwap" class="cc-swap" title="swap">⇄</button><select id="ccTo" class="cc-select"></select></div><div class="cc-result" id="ccResult">—</div><p class="cc-note" data-i18n="ccNote">أسعار تقريبية للاستئناس فقط</p></div><div class="tool-card"><h3 class="tool-title">🌤️ <span data-i18n="weatherTitle">مناخ المدن</span></h3><div class="cc-row"><select id="wCity" class="cc-select cc-select-full"></select></div><div class="weather-box" id="weatherBox"></div></div></div></div></section>
+
+<section id="faq" class="faq reveal"><div class="container"><h2 class="section-title" data-i18n="faqTitle">الأسئلة الشائعة</h2><p class="section-subtitle" data-i18n="faqSub">إجابات عن أكثر الاستفسارات شيوعاً</p><div class="faq-list"><div class="faq-item"><button class="faq-q">كيف يمكنني حجز رحلة سياحية؟<span class="faq-icon">+</span></button><div class="faq-a"><p>يمكنك تصفح قسم الوجهات واختيار الوجهة ثم الانتقال إلى قسم الحجز لإتمام الحجز.</p></div></div><div class="faq-item"><button class="faq-q">هل المرشدون معتمدون؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، جميع المرشدين المسجلين عبر بوابة المرشدين يخضعون لعملية تحقق وتوثيق.</p></div></div><div class="faq-item"><button class="faq-q">ما هي أفضل أوقات الزيارة؟<span class="faq-icon">+</span></button><div class="faq-a"><p>تعد أشهر الشتاء والربيع الأفضل لزيارة معظم الوجهات بسبب الطقس المعتدل.</p></div></div><div class="faq-item"><button class="faq-q">هل تدعمون عدة لغات؟<span class="faq-icon">+</span></button><div class="faq-a"><p>نعم، يمكنك التبديل بين العربية والإنجليزية من زر اللغة في الأعلى.</p></div></div></div></div></section>
+
+<section id="newsletter" class="newsletter reveal"><div class="container newsletter-inner"><h2 data-i18n="newsTitle">اشترك في النشرة البريدية</h2><p data-i18n="newsSub">احصل على أحدث العروض والوجهات مباشرة إلى بريدك</p><form id="newsForm" class="news-form"><input type="email" id="newsEmail" class="news-input" placeholder="بريدك الإلكتروني" data-i18n-ph="newsPh" required><button type="submit" class="news-btn" data-i18n="newsBtn">اشترك</button></form><div class="news-msg" id="newsMsg"></div></div></section>
 <footer>
 <div class="container footer-content">
 <div class="footer-col">
@@ -398,20 +412,20 @@
 <div class="footer-col">
 <h4>روابط سريعة</h4>
 <ul>
-<li><a href="#home">الرئيسية</a></li>
-<li><a href="#attractions">الوجهات</a></li>
-<li><a href="#flights">الطيران</a></li>
-<li><a href="#hotels">الفنادق</a></li>
-<li><a href="#booking">الحجز</a></li>
+<li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+<li><a href="#attractions" data-i18n="navDest">الوجهات</a></li>
+<li><a href="#flights" data-i18n="navFlights">الطيران</a></li>
+<li><a href="#hotels" data-i18n="navHotels">الفنادق</a></li>
+<li><a href="#booking" data-i18n="navBooking">الحجز</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>خدماتنا</h4>
 <ul>
-<li><a href="#flights">حجز الطيران</a></li>
-<li><a href="#hotels">حجز الفنادق</a></li>
-<li><a href="#guides">مرشدون معتمدون</a></li>
-<li><a href="#booking">باقات سياحية</a></li>
+<li><a href="#flights" data-i18n="navFlights">حجز الطيران</a></li>
+<li><a href="#hotels" data-i18n="navHotels">حجز الفنادق</a></li>
+<li><a href="#guides" data-i18n="navGuides">مرشدون معتمدون</a></li>
+<li><a href="#booking" data-i18n="navBooking">باقات سياحية</a></li>
 </ul>
 </div>
 </div>
@@ -507,5 +521,163 @@
   if(sess){ var g=getGuides().filter(function(x){return x.email===sess.email})[0]; if(g) showDash(g); }
 })();
 </script>
+
+<script>
+(function(){
+  /* ===== i18n dictionary ===== */
+  var I18N = {
+    en: {
+      navHome:"Home", navDest:"Destinations", navFlights:"Flights", navHotels:"Hotels",
+      navBooking:"Booking", navGuides:"Guides", navPortal:"Guide Portal", navCompanies:"Companies",
+      navContact:"Contact", navTools:"Traveler Tools", navFaq:"FAQ",
+      toolsTitle:"Traveler Tools", toolsSub:"Smart tools to help you plan your trip",
+      currencyTitle:"Currency Converter", ccNote:"Approximate rates for reference only",
+      weatherTitle:"City Climate",
+      faqTitle:"Frequently Asked Questions", faqSub:"Answers to the most common questions",
+      newsTitle:"Subscribe to our Newsletter", newsSub:"Get the latest offers and destinations straight to your inbox",
+      newsBtn:"Subscribe", searchPlaceholder:"Search destinations...", newsPh:"Your email address"
+    },
+    ar: {
+      navHome:"\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629", navDest:"\u0627\u0644\u0648\u062C\u0647\u0627\u062A", navFlights:"\u0627\u0644\u0637\u064A\u0631\u0627\u0646", navHotels:"\u0627\u0644\u0641\u0646\u0627\u062F\u0642",
+      navBooking:"\u0627\u0644\u062D\u062C\u0632", navGuides:"\u0627\u0644\u0645\u0631\u0634\u062F\u0648\u0646", navPortal:"\u0628\u0648\u0627\u0628\u0629 \u0627\u0644\u0645\u0631\u0634\u062F\u064A\u0646", navCompanies:"\u0627\u0644\u0634\u0631\u0643\u0627\u062A \u0627\u0644\u0633\u064A\u0627\u062D\u064A\u0629",
+      navContact:"\u062A\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627", navTools:"\u0623\u062F\u0648\u0627\u062A \u0627\u0644\u0645\u0633\u0627\u0641\u0631", navFaq:"\u0627\u0644\u0623\u0633\u0626\u0644\u0629",
+      toolsTitle:"\u0623\u062F\u0648\u0627\u062A \u0627\u0644\u0645\u0633\u0627\u0641\u0631", toolsSub:"\u0623\u062F\u0648\u0627\u062A \u0630\u0643\u064A\u0629 \u062A\u0633\u0627\u0639\u062F\u0643 \u0641\u064A \u062A\u062E\u0637\u064A\u0637 \u0631\u062D\u0644\u062A\u0643",
+      currencyTitle:"\u0645\u062D\u0648\u0644 \u0627\u0644\u0639\u0645\u0644\u0627\u062A", ccNote:"\u0623\u0633\u0639\u0627\u0631 \u062A\u0642\u0631\u064A\u0628\u064A\u0629 \u0644\u0644\u0627\u0633\u062A\u0626\u0646\u0627\u0633 \u0641\u0642\u0637",
+      weatherTitle:"\u0645\u0646\u0627\u062E \u0627\u0644\u0645\u062F\u0646",
+      faqTitle:"\u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0634\u0627\u0626\u0639\u0629", faqSub:"\u0625\u062C\u0627\u0628\u0627\u062A \u0639\u0646 \u0623\u0643\u062B\u0631 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631\u0627\u062A \u0634\u064A\u0648\u0639\u0627\u064B",
+      newsTitle:"\u0627\u0634\u062A\u0631\u0643 \u0641\u064A \u0627\u0644\u0646\u0634\u0631\u0629 \u0627\u0644\u0628\u0631\u064A\u062F\u064A\u0629", newsSub:"\u0627\u062D\u0635\u0644 \u0639\u0644\u0649 \u0623\u062D\u062F\u062B \u0627\u0644\u0639\u0631\u0648\u0636 \u0648\u0627\u0644\u0648\u062C\u0647\u0627\u062A \u0645\u0628\u0627\u0634\u0631\u0629 \u0625\u0644\u0649 \u0628\u0631\u064A\u062F\u0643",
+      newsBtn:"\u0627\u0634\u062A\u0631\u0643", searchPlaceholder:"\u0627\u0628\u062D\u062B \u0639\u0646 \u0648\u062C\u0647\u0629...", newsPh:"\u0628\u0631\u064A\u062F\u0643 \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A"
+    }
+  };
+  function applyLang(lang){
+    var dict = I18N[lang] || I18N.ar;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.getAttribute('data-i18n'); if(dict[k]!=null) el.textContent = dict[k];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+      var k = el.getAttribute('data-i18n-ph'); if(dict[k]!=null) el.setAttribute('placeholder', dict[k]);
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang==='ar') ? 'rtl' : 'ltr';
+    var lt = document.getElementById('langToggle'); if(lt) lt.textContent = (lang==='ar') ? 'EN' : 'ع';
+    try{ localStorage.setItem('dl_lang', lang); }catch(e){}
+  }
+  var savedLang = 'ar'; try{ savedLang = localStorage.getItem('dl_lang') || 'ar'; }catch(e){}
+  applyLang(savedLang);
+  var langBtn = document.getElementById('langToggle');
+  if(langBtn) langBtn.addEventListener('click', function(){
+    var cur = document.documentElement.lang; applyLang(cur==='ar'?'en':'ar');
+  });
+
+  /* ===== Theme toggle ===== */
+  function applyTheme(t){
+    if(t==='dark'){ document.body.classList.add('dark-theme'); }
+    else { document.body.classList.remove('dark-theme'); }
+    var tb=document.getElementById('themeToggle'); if(tb) tb.textContent = (t==='dark')?'\u2600\uFE0F':'\u{1F319}';
+    try{ localStorage.setItem('dl_theme', t); }catch(e){}
+  }
+  var savedTheme='light'; try{ savedTheme = localStorage.getItem('dl_theme')||'light'; }catch(e){}
+  applyTheme(savedTheme);
+  var themeBtn=document.getElementById('themeToggle');
+  if(themeBtn) themeBtn.addEventListener('click', function(){
+    applyTheme(document.body.classList.contains('dark-theme')?'light':'dark');
+  });
+
+  /* ===== Progress bar + back to top ===== */
+  var pb=document.getElementById('progressBar'), btt=document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    var st=document.documentElement.scrollTop||document.body.scrollTop;
+    var sh=(document.documentElement.scrollHeight||document.body.scrollHeight)-document.documentElement.clientHeight;
+    if(pb) pb.style.width = (sh>0?(st/sh*100):0)+'%';
+    if(btt){ if(st>400) btt.classList.add('show'); else btt.classList.remove('show'); }
+  });
+  if(btt) btt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  /* ===== Scroll reveal ===== */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal, section').forEach(function(s){ s.classList.add('reveal'); io.observe(s); });
+  } else {
+    document.querySelectorAll('.reveal, section').forEach(function(s){ s.classList.add('revealed'); });
+  }
+
+  /* ===== Attractions search ===== */
+  var attrSearch=document.getElementById('attrSearch'), attrCount=document.getElementById('attrCount');
+  function filterAttr(){
+    var q=(attrSearch.value||'').trim().toLowerCase();
+    var cards=document.querySelectorAll('#attractions .card'); var shown=0;
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      var m = !q || t.indexOf(q)>-1;
+      c.style.display = m?'':'none'; if(m) shown++;
+    });
+    if(attrCount) attrCount.textContent = shown + ' / ' + cards.length;
+  }
+  if(attrSearch){ attrSearch.addEventListener('input', filterAttr); filterAttr(); }
+
+  /* ===== Currency converter ===== */
+  var RATES={ SAR:1, USD:0.2667, EUR:0.2453, GBP:0.2100, AED:0.9794, EGP:13.05, KWD:0.0820, JPY:39.8, TRY:8.55 };
+  var NAMES_AR={SAR:'\u0631\u064A\u0627\u0644 \u0633\u0639\u0648\u062F\u064A',USD:'\u062F\u0648\u0644\u0627\u0631 \u0623\u0645\u0631\u064A\u0643\u064A',EUR:'\u064A\u0648\u0631\u0648',GBP:'\u062C\u0646\u064A\u0647 \u0625\u0633\u062A\u0631\u0644\u064A\u0646\u064A',AED:'\u062F\u0631\u0647\u0645 \u0625\u0645\u0627\u0631\u0627\u062A\u064A',EGP:'\u062C\u0646\u064A\u0647 \u0645\u0635\u0631\u064A',KWD:'\u062F\u064A\u0646\u0627\u0631 \u0643\u0648\u064A\u062A\u064A',JPY:'\u064A\u0646 \u064A\u0627\u0628\u0627\u0646\u064A',TRY:'\u0644\u064A\u0631\u0629 \u062A\u0631\u0643\u064A\u0629'};
+  var amt=document.getElementById('ccAmount'), from=document.getElementById('ccFrom'), to=document.getElementById('ccTo'), res=document.getElementById('ccResult'), swap=document.getElementById('ccSwap');
+  if(from&&to){
+    Object.keys(RATES).forEach(function(c){
+      var o1=document.createElement('option'); o1.value=c; o1.textContent=c+' - '+NAMES_AR[c]; from.appendChild(o1);
+      var o2=document.createElement('option'); o2.value=c; o2.textContent=c+' - '+NAMES_AR[c]; to.appendChild(o2);
+    });
+    from.value='SAR'; to.value='USD';
+    function conv(){
+      var a=parseFloat(amt.value)||0;
+      var inSar=a/RATES[from.value];
+      var out=inSar*RATES[to.value];
+      res.textContent = a.toLocaleString()+' '+from.value+' = '+out.toLocaleString(undefined,{maximumFractionDigits:2})+' '+to.value;
+    }
+    [amt,from,to].forEach(function(el){ el.addEventListener('input',conv); el.addEventListener('change',conv); });
+    if(swap) swap.addEventListener('click', function(){ var t=from.value; from.value=to.value; to.value=t; conv(); });
+    conv();
+  }
+
+  /* ===== Weather/climate widget (static demo data) ===== */
+  var CITIES={
+    '\u0627\u0644\u0631\u064A\u0627\u0636':{t:'24\u00B0C',d:'\u0635\u062D\u0648 \u0648\u0645\u0639\u062A\u062F\u0644',i:'\u2600\uFE0F',best:'\u0646\u0648\u0641\u0645\u0628\u0631 - \u0645\u0627\u0631\u0633'},
+    '\u062C\u062F\u0629':{t:'31\u00B0C',d:'\u062F\u0627\u0641\u0626 \u0648\u0631\u0637\u0628',i:'\u{1F324}\uFE0F',best:'\u062F\u064A\u0633\u0645\u0628\u0631 - \u0641\u0628\u0631\u0627\u064A\u0631'},
+    '\u0623\u0628\u0647\u0627':{t:'18\u00B0C',d:'\u0644\u0637\u064A\u0641 \u0648\u063A\u0627\u0626\u0645',i:'\u26C5',best:'\u064A\u0648\u0646\u064A\u0648 - \u0633\u0628\u062A\u0645\u0628\u0631'},
+    '\u0627\u0644\u0639\u0644\u0627':{t:'26\u00B0C',d:'\u0635\u062D\u0648 \u0635\u062D\u0631\u0627\u0648\u064A',i:'\u2600\uFE0F',best:'\u0623\u0643\u062A\u0648\u0628\u0631 - \u0623\u0628\u0631\u064A\u0644'},
+    '\u0627\u0644\u062F\u0645\u0627\u0645':{t:'29\u00B0C',d:'\u062D\u0627\u0631 \u0633\u0627\u062D\u0644\u064A',i:'\u{1F324}\uFE0F',best:'\u062F\u064A\u0633\u0645\u0628\u0631 - \u0641\u0628\u0631\u0627\u064A\u0631'}
+  };
+  var wCity=document.getElementById('wCity'), wBox=document.getElementById('weatherBox');
+  if(wCity&&wBox){
+    Object.keys(CITIES).forEach(function(c){ var o=document.createElement('option'); o.value=c; o.textContent=c; wCity.appendChild(o); });
+    function showW(){
+      var c=CITIES[wCity.value];
+      wBox.innerHTML='<div class="w-temp">'+c.i+' '+c.t+'</div><div class="w-desc">'+c.d+'</div><div class="w-best">\u0623\u0641\u0636\u0644 \u0648\u0642\u062A \u0644\u0644\u0632\u064A\u0627\u0631\u0629: '+c.best+'</div>';
+    }
+    wCity.addEventListener('change', showW); showW();
+  }
+
+  /* ===== FAQ accordion ===== */
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item=q.parentElement; var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+      if(!open) item.classList.add('open');
+    });
+  });
+
+  /* ===== Newsletter ===== */
+  var nf=document.getElementById('newsForm'), nmsg=document.getElementById('newsMsg');
+  if(nf) nf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var em=document.getElementById('newsEmail').value.trim();
+    if(em){
+      try{ var subs=JSON.parse(localStorage.getItem('dl_subs')||'[]'); if(subs.indexOf(em)<0) subs.push(em); localStorage.setItem('dl_subs', JSON.stringify(subs)); }catch(e2){}
+      nmsg.textContent = (document.documentElement.lang==='en') ? 'Thank you for subscribing!' : '\u0634\u0643\u0631\u0627\u064B \u0644\u0627\u0634\u062A\u0631\u0627\u0643\u0643!';
+      nmsg.classList.add('ok'); nf.reset();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
